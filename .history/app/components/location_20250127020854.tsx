@@ -157,7 +157,35 @@ export default function Location() {
               </div>
             </div>
 
-            
+            {/* Attractions */}
+            <div className="bg-card p-6 rounded-lg shadow-sm">
+              <h3 className="font-medium mb-4">Nearby Attractions</h3>
+              <div className="space-y-4">
+                {attractions.map((attraction, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex justify-between items-start border-b border-border/50 pb-4"
+                  >
+                    <div>
+                      <div className="font-medium">{attraction.name}</div>
+                      <p className="text-sm text-muted-foreground">
+                        {attraction.description}
+                      </p>
+                    </div>
+                    <div className="text-sm text-primary font-medium">
+                      {attraction.distance}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <Button className="w-full" size="lg">
+              Get Directions
+            </Button>
           
           </motion.div>
 
@@ -167,7 +195,7 @@ export default function Location() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-8 flex flex-col justify-between" 
+            className="space-y-8"
           >
             {/* Address and Contact */}
             <div className="bg-card p-6 rounded-lg shadow-sm">
@@ -210,35 +238,7 @@ export default function Location() {
                 </div>
               </div>
             </div>
-                  {/* Attractions */}
-            <div className="bg-card p-6 rounded-lg shadow-sm">
-              <h3 className="font-medium mb-4">Nearby Attractions</h3>
-              <div className="space-y-4">
-                {attractions.map((attraction, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex justify-between items-start border-b border-border/50 pb-4"
-                  >
-                    <div>
-                      <div className="font-medium">{attraction.name}</div>
-                      <p className="text-sm text-muted-foreground">
-                        {attraction.description}
-                      </p>
-                    </div>
-                    <div className="text-sm text-primary font-medium">
-                      {attraction.distance}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
 
-            <Button className="w-full" size="lg">
-              Get Directions
-            </Button>
             </motion.div>
         </div>
       </div>

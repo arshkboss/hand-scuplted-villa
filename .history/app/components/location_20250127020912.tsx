@@ -167,7 +167,7 @@ export default function Location() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-8 flex flex-col justify-between" 
+            className="space-y-8"
           >
             {/* Address and Contact */}
             <div className="bg-card p-6 rounded-lg shadow-sm">

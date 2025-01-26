@@ -137,28 +137,6 @@ export default function Location() {
                 ))}
               </div>
             </div>
-            {/* Nearby Activities */}
-            <div className="bg-card p-6 rounded-lg shadow-sm">
-              <h3 className="font-medium mb-4">Activities Nearby</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {activities.map((activity, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.02 }}
-                    className="p-4 bg-secondary/30 rounded-lg"
-                  >
-                    <activity.icon className="w-6 h-6 text-primary mb-2" />
-                    <div className="font-medium">{activity.title}</div>
-                    <p className="text-sm text-muted-foreground">
-                      {activity.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            
-          
           </motion.div>
 
           {/* Location Details */}
@@ -167,7 +145,7 @@ export default function Location() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-8 flex flex-col justify-between" 
+            className="space-y-8"
           >
             {/* Address and Contact */}
             <div className="bg-card p-6 rounded-lg shadow-sm">
@@ -210,7 +188,28 @@ export default function Location() {
                 </div>
               </div>
             </div>
-                  {/* Attractions */}
+
+            {/* Nearby Activities */}
+            <div className="bg-card p-6 rounded-lg shadow-sm">
+              <h3 className="font-medium mb-4">Activities Nearby</h3>
+              <div className="grid grid-cols-2 gap-4">
+                {activities.map((activity, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.02 }}
+                    className="p-4 bg-secondary/30 rounded-lg"
+                  >
+                    <activity.icon className="w-6 h-6 text-primary mb-2" />
+                    <div className="font-medium">{activity.title}</div>
+                    <p className="text-sm text-muted-foreground">
+                      {activity.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Attractions */}
             <div className="bg-card p-6 rounded-lg shadow-sm">
               <h3 className="font-medium mb-4">Nearby Attractions</h3>
               <div className="space-y-4">
@@ -239,7 +238,7 @@ export default function Location() {
             <Button className="w-full" size="lg">
               Get Directions
             </Button>
-            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
