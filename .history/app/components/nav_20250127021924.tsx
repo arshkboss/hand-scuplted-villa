@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Home, Menu, X } from 'lucide-react'
+import { Icon, Menu, X } from 'lucide-react'
 import { Button } from '@/app/ui/button'
 
 // Navigation items
@@ -43,11 +43,11 @@ export default function Nav() {
             {/* Logo */}
             <motion.a
               href="#"
-              className="text-2xl font-bold text-primary flex items-center gap-2"
+              className="text-2xl font-bold text-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Home className="w-7 h-7" />
+              <Icon icon="home" className="w-10 h-10" />
               Villa Haven
             </motion.a>
 

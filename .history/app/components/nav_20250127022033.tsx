@@ -47,7 +47,7 @@ export default function Nav() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Home className="w-7 h-7" />
+              <Home className="w-5 h-5" />
               Villa Haven
             </motion.a>
 

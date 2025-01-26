@@ -24,7 +24,7 @@ export default function Hero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 flex h-full flex-col items-start justify-end  text-left text-white pb-20 px-5">
+      <div className="relative z-10 flex h-full flex-col items- justify  text-left text-white pb-20">
         <motion.h1 
           className="font-fairytale text-5xl md:text-7xl mb-4"
           {...fadeIn}

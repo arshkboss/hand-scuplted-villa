@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Home, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/app/ui/button'
 
 // Navigation items
@@ -35,7 +35,7 @@ export default function Nav() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-black/40 backdrop-blur-md shadow-md text-white' : 'bg-transparent'
+          isScrolled ? 'bg-black/20 backdrop-blur-md shadow-md text-white' : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -43,11 +43,10 @@ export default function Nav() {
             {/* Logo */}
             <motion.a
               href="#"
-              className="text-2xl font-bold text-primary flex items-center gap-2"
+              className="text-2xl font-bold text-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Home className="w-7 h-7" />
               Villa Haven
             </motion.a>
 
