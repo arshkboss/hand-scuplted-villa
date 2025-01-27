@@ -239,7 +239,7 @@ export default function Location() {
            
             </motion.div>
         </div>
-        <Button className="flex justify-center m-0 mx-auto mt-20 hover:bg-primary/80" size="lg">
+        <Button className="flex justify-center m-0 mx-auto mt-20 hover:bg-secondary/80" size="lg">
               Get Directions
             </Button>
       </div>

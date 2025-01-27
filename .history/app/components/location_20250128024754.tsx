@@ -167,7 +167,7 @@ export default function Location() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-8 flex flex-col justify-start" 
+            className="space-y-8 flex flex-col justify-between" 
           >
             {/* Address and Contact */}
             <div className="bg-card p-6 rounded-lg shadow-sm">
@@ -239,7 +239,7 @@ export default function Location() {
            
             </motion.div>
         </div>
-        <Button className="flex justify-center m-0 mx-auto mt-20 hover:bg-primary/80" size="lg">
+        <Button className="flex justify-center m-0 mx-auto mt-10 h-15" size="lg">
               Get Directions
             </Button>
       </div>
